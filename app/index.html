@@ -19,7 +19,7 @@
 <div ng-controller="ToDoListController as toDoList">
     <div ng-repeat="item in toDoList.items">
         <label>
-            <input type="checkbox" ng-init="item.isComplete" ng-model="deleted"}>
+            <input type="checkbox" ng-model="deleted"}>
             <div ng-class="{strike: deleted}"> {{item.itemName}} </div>
         </label>
     </div>
