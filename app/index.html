@@ -17,10 +17,12 @@
 
 <h1>To Do List:</h1>
 <div ng-controller="ToDoListController as toDoList">
-    <label>
-        <input type="checkbox" ng-init="toDoList.item.isComplete" ng-model="deleted"}>
-        <div ng-class="{strike: deleted}"> {{toDoList.item.itemName}} </div>
-    </label>
+    <div ng-repeat="item in toDoList.items">
+        <label>
+            <input type="checkbox" ng-init="item.isComplete" ng-model="deleted"}>
+            <div ng-class="{strike: deleted}"> {{item.itemName}} </div>
+        </label>
+    </div>
 
 </div>
 
