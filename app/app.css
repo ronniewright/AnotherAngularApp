@@ -32,3 +32,8 @@
 .strike{
   text-decoration: line-through;
 }
+
+BODY {
+  padding-left: 50px;
+  padding-right: 50px;
+}
