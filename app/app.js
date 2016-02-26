@@ -5,11 +5,12 @@
     var app = angular.module('toDoList', [])
 
     app.controller('ToDoListController', function(){
-        this.item = listItem;
+        this.items = listItems;
     });
 
-    var listItem = {
-        isComplete : false,
+    var listItems = [{
         itemName : "First thing to do"
-    };
+    },{
+        itemName : "Second thing to do"
+    }];
 })();

@@ -15,12 +15,14 @@
   <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
 
-<h1>To Do List:</h1>
+<h2>To Do List:</h2>
 <div ng-controller="ToDoListController as toDoList">
-    <label>
-        <input type="checkbox" ng-init="toDoList.item.isComplete" ng-model="deleted"}>
-        <div ng-class="{strike: deleted}"> {{toDoList.item.itemName}} </div>
-    </label>
+    <div ng-repeat="item in toDoList.items">
+            <label>
+                <input type="checkbox" ng-model="deleted"}></label>
+                <div ng-class="{strike: deleted}"> {{item.itemName}} </div>
+            </label>
+    </div>
 
 </div>
 
