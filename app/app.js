@@ -8,8 +8,8 @@
         this.items = listItems;
         this.newItem = "";
         this.addItem = function(item){
-            var newItem = {itemName : item};
-            this.items.push(newItem);
+            var tempItem = {itemName : item};
+            this.items.push(tempItem);
         };
     });
 
