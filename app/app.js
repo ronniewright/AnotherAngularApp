@@ -6,6 +6,11 @@
 
     app.controller('ToDoListController', function(){
         this.items = listItems;
+        this.newItem = "";
+        this.addItem = function(item){
+            var tempItem = {itemName : item};
+            this.items.push(tempItem);
+        };
     });
 
     var listItems = [{
@@ -13,4 +18,5 @@
     },{
         itemName : "Second thing to do"
     }];
+
 })();

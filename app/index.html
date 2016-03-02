@@ -19,11 +19,12 @@
 <h2>To Do List:</h2>
 <div ng-controller="ToDoListController as toDoList">
     <div ng-repeat="item in toDoList.items">
-            <label style="float:left">
-                <input type="checkbox" ng-model="deleted"}></label>
-                <div ng-class="{strike: deleted}"> {{item.itemName}} </div>
-            </label>
+        <label style="float:left">
+            <input type="checkbox" ng-model="deleted"}></label>
+            <div ng-class="{strike: deleted}"> {{item.itemName}} </div>
+        </label>
     </div>
+    <input ng-model="newItem"><input type="submit" ng-click="toDoList.addItem(newItem)" value="Add Item">
 </div>
 
 
