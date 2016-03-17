@@ -5,6 +5,11 @@
 describe('my app', function() {
 
 
+  it('should display To Do List text', function(){
+    browser.get('index.html');
+    expect(browser.getElement(by.id('qa-heading'))).toMatch('To Do List:');
+  });
+
   it('should automatically redirect to /view1 when location hash/fragment is empty', function() {
     browser.get('index.html');
     expect(browser.getLocationAbsUrl()).toMatch("/view1");
