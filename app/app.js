@@ -7,16 +7,28 @@
     app.controller('ToDoListController', function(){
         this.items = listItems;
         this.newItem = "";
-        this.addItem = function(item){
-            var tempItem = {itemName : item};
-            this.items.push(tempItem);
+        this.deleteItem = function(index){
+            this.items.splice(index, 1);
         };
     });
 
+    app.controller('NewItemController', function(){
+        this.newItem = {};
+
+        this.addItem = function(){
+            listItems.push(this.newItem);
+            this.newItem={};
+        }
+    });
+
     var listItems = [{
-        itemName : "First thing to do"
+        itemName : "Add Delete Buttons"
     },{
-        itemName : "Second thing to do"
+        itemName : "Have Delete Buttons actually Delete"
+    },{
+        itemName : "Make input field required to submit"
+    },{
+        itemName : "Subtasks"
     }];
 
 })();

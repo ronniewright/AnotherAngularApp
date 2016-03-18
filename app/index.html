@@ -18,13 +18,18 @@
 
 <h2 id="qa-heading">To Do List:</h2>
 <div ng-controller="ToDoListController as toDoList">
+
     <div ng-repeat="item in toDoList.items">
         <label style="float:left">
-            <input type="checkbox" ng-model="deleted"}></label>
-            <div ng-class="{strike: deleted}"> {{item.itemName}} </div>
+            <input style="float:left" type="checkbox" ng-model="deleted"}></label>
+            <div style="float:left" ng-class="{strike: deleted}"> {{item.itemName}} </div>
+            <input class="asText" ng-show="deleted" type="button" ng-click="toDoList.deleteItem($index)" value="   Delete">
+            &nbsp;
         </label>
     </div>
-    <input ng-model="newItem"><input type="submit" ng-click="toDoList.addItem(newItem)" value="Add Item">
+    <form name="newItemForm" ng-controller="NewItemController as newItemCtrl" ng-submit="newItemCtrl.addItem()">
+        <input ng-model="newItemCtrl.newItem.itemName"><input type="submit" value="Add Item">
+    </form>
 </div>
 
 

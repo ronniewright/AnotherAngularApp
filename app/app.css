@@ -37,3 +37,13 @@ BODY {
   padding-left: 50px;
   padding-right: 50px;
 }
+
+.asText {
+    background:none;
+    border:none;
+    margin:0;
+    padding:0;
+    font-size: 75%;
+    color: red;
+    font-weight:bold;
+}
