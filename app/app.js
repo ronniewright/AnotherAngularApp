@@ -10,6 +10,21 @@
         this.deleteItem = function(index){
             this.items.splice(index, 1);
         };
+        this.allSubItemsComplete = function(index){
+            var subItems = this.items[index].subItems;
+            var allSelected=true;
+            if ((subItems.length === 0)){
+                allSelected=false;
+            } else {
+                for (var i = 0; i< subItems.length; i++){
+                    if (!subItems[i].completed){
+                        allSelected = false;
+                        break;
+                    }
+                }
+            }
+            return allSelected;
+        };
     });
 
     app.controller('NewItemController', function(){
@@ -21,13 +36,20 @@
         }
     });
 
+    app.directive('item', function(){
+        return {
+            restrict: 'E',
+            templateUrl: 'item.html'
+        };
+    });
+
     var listItems = [{
         itemName : "Subtasks",
         subItems : [{
             subItemName :"Let them exist",
             completed : true
         },{
-           subItemName : "Strikethrough on click",
+            subItemName : "Strikethrough on click",
             completed: true
         },{
             subItemName: "Select item if all subtasks complete",
@@ -41,15 +63,8 @@
         }]
         },
         {
-         itemName : "persist data",
-          subItems: []
+            itemName : "persist data",
+            subItems: []
         }];
-
-    app.directive('item', function(){
-        return {
-            restrict: 'E', //e for element
-            templateUrl: 'item.html'
-        };
-    })
 
 })();
