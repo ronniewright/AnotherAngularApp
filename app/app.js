@@ -26,8 +26,15 @@
         subItems : ["Let them exist", "Strikethrough on click", "add new Subtasks", "select item if all subtasks complete", "delete subtasks?"]
         },
         {
-         itemName : "Next Task",
+         itemName : "persist data",
           subItems: []
         }];
+
+    app.directive('item', function(){
+        return {
+            restrict: 'E', //e for element
+            templateUrl: 'item.html'
+        };
+    })
 
 })();
