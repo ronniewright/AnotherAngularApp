@@ -23,7 +23,22 @@
 
     var listItems = [{
         itemName : "Subtasks",
-        subItems : ["Let them exist", "Strikethrough on click", "add new Subtasks", "select item if all subtasks complete", "delete subtasks?"]
+        subItems : [{
+            subItemName :"Let them exist",
+            completed : true
+        },{
+           subItemName : "Strikethrough on click",
+            completed: true
+        },{
+            subItemName: "Select item if all subtasks complete",
+            completed: false
+        },{
+            subItemName: "Add new subtasks",
+            completed: false
+        },{
+            subItemName: "delete subtasks",
+            completed: false
+        }]
         },
         {
          itemName : "persist data",

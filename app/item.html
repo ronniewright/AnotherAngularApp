@@ -5,5 +5,5 @@
 <input class="asText" ng-show="deleted" type="button" ng-click="toDoList.deleteItem($index)" value="   Delete">
 &nbsp;
 <li class="subTask" ng-repeat="subItem in item.subItems">
-    <div ng-click="marked = !marked" ng-class="{strike: marked}"> {{subItem}}</div>
+    <div ng-click="subItem.completed = !subItem.completed" ng-class="{strike: subItem.completed}"> {{subItem.subItemName}}</div>
 </li>
