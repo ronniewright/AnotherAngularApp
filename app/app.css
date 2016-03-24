@@ -47,3 +47,7 @@ BODY {
     color: red;
     font-weight:bold;
 }
+
+.subTask {
+    text-indent: 50px;
+}

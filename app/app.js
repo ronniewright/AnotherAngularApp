@@ -22,13 +22,12 @@
     });
 
     var listItems = [{
-        itemName : "Add Delete Buttons"
-    },{
-        itemName : "Have Delete Buttons actually Delete"
-    },{
-        itemName : "Make input field required to submit"
-    },{
-        itemName : "Subtasks"
-    }];
+        itemName : "Subtasks",
+        subItems : ["Let them exist", "Strikethrough on click", "add new Subtasks", "select item if all subtasks complete", "delete subtasks?"]
+        },
+        {
+         itemName : "Next Task",
+          subItems: []
+        }];
 
 })();
