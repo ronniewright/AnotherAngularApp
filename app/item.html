@@ -1,0 +1,9 @@
+
+
+<input style="float:left" type="checkbox" ng-model="deleted"/>
+<div style="float:left" ng-class="{strike: deleted}"> {{item.itemName}} </div>
+<input class="asText" ng-show="deleted" type="button" ng-click="toDoList.deleteItem($index)" value="   Delete">
+&nbsp;
+<li class="subTask" ng-repeat="subItem in item.subItems">
+    <div ng-click="marked = !marked" ng-class="{strike: marked}"> {{subItem}}</div>
+</li>
