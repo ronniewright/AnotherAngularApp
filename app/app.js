@@ -23,7 +23,11 @@
                     }
                 }
             }
+            if (allSelected){
+                this.items[index].completed = true;
+            }
             return allSelected;
+
         };
     });
 
@@ -45,6 +49,7 @@
 
     var listItems = [{
         itemName : "Subtasks",
+        completed: false,
         subItems : [{
             subItemName :"Let them exist",
             completed : true
@@ -64,6 +69,7 @@
         },
         {
             itemName : "persist data",
+            completed: false,
             subItems: []
         }];
 
