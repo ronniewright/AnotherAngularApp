@@ -25,6 +25,8 @@
             }
             if (allSelected){
                 this.items[index].completed = true;
+            } else {
+                this.items[index].completed = false;
             }
             return allSelected;
 
