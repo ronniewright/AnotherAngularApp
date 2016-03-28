@@ -22,7 +22,7 @@
         <item></item>
     </div>
     <form name="newItemForm" ng-controller="NewItemController as newItemCtrl" ng-submit="newItemCtrl.addItem()">
-        <input required ng-model="newItemCtrl.newItem.itemName"><input ng-disabled="newItemForm.$invalid" type="submit" value="Add Item">
+        <input name="newItem" required ng-model="newItemCtrl.newItem.itemName"><input ng-disabled="newItemForm.$invalid" type="submit" value="Add Item" name="addNewItem">
     </form>
 </div>
 

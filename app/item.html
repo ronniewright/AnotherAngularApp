@@ -1,6 +1,6 @@
 
 
-<input style="float:left" type="checkbox" ng-model="item.completed" ng-checked="toDoList.allSubItemsComplete($index) || item.completed"/>
+<input style="float:left" type="checkbox" ng-click="toDoList.selectItem($index)" ng-model="item.completed" ng-checked="toDoList.allSubItemsComplete($index) || item.completed"/>
 <div style="float:left" ng-class="{strike: item.completed}"> {{item.itemName}} </div>
 <input class="asText" ng-show="item.completed" type="button" ng-click="toDoList.deleteItem($index)" value="   Delete">
 &nbsp;

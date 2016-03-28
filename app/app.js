@@ -10,6 +10,15 @@
         this.deleteItem = function(index){
             this.items.splice(index, 1);
         };
+        this.selectItem = function(index){
+            //mark item as selected
+            this.item[index].selected = true;
+            //mark all subitems as selected
+            var subItems = this.items[index].subItems;
+            for (var i=0; i < subItems.length; i++){
+                subItems[i].completed = true;
+            }
+        };
         this.allSubItemsComplete = function(index){
             var subItems = this.items[index].subItems;
             var allSelected=true;
